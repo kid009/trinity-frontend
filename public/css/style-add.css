@@ -1,0 +1,16 @@
+#img-top-page{
+    filter: blur(2px);
+}
+#h2-topic-page{
+    margin-top: 60px;
+    letter-spacing: 0;
+}
+#img-product{
+    width: 100%; 
+    height: 200px;
+}
+#img-tradition{
+	width: 100%;
+	height: 100px;
+}
+
