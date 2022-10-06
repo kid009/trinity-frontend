@@ -71,7 +71,6 @@ export default {
   .banner__content h1 {
     font-size: 40px;
   }
- 
 }
 
 .banner__content h1 {

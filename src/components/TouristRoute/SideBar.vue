@@ -7,7 +7,10 @@
         page="1"
       />
       <div class="sidebar-block">
-        <h4 id="letter-travel" class="sidebar-title color-dark-2 letter-spacing">
+        <h4
+          id="letter-travel"
+          class="sidebar-title color-dark-2 letter-spacing"
+        >
           หมวดหมู่เส้นทาง
         </h4>
         <ul class="sidebar-category color-4">

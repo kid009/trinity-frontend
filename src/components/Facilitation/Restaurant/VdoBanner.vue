@@ -31,7 +31,7 @@
                   <div class="input-style-1 min-324">
                     <img src="img/loc_icon_small.png" alt="" />
                     <input
-                    class="fontstyle"
+                      class="fontstyle"
                       id="search-bar-topic"
                       type="text"
                       placeholder="ค้นหาเมนูอาหารที่คุณต้องการ..."

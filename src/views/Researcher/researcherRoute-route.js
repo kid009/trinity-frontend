@@ -3,8 +3,6 @@ import { h, resolveComponent } from "vue";
 import ResearcherDetailPage from "./ResearcherDetailPage.vue";
 import ResearcherInnovationDetail from "./ResearcherInnovationDetail.vue";
 
-
-
 const researcherRoute = [
   {
     path: "researcherroute",
@@ -25,8 +23,6 @@ const researcherRoute = [
     name: "ResearcherInnovationDetail",
     component: ResearcherInnovationDetail,
   },
- 
-  
 ];
 
 export default researcherRoute;

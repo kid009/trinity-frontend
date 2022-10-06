@@ -3,12 +3,8 @@
 </template>
 
 <script>
-
-
-
 import GridTravel from "../../components/TravelPlan/GridTravel.vue";
 export default {
-  
   name: "TravelPlanIndex",
   components: {
     GridTravel,
@@ -16,5 +12,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

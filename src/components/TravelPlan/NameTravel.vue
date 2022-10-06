@@ -190,10 +190,10 @@ th h4 {
   color: #555;
 }
 .bg-table {
- background: #ffffffa1;
-    border-radius: 20px;
-    border: 2px solid white;
-    text-align: center;
+  background: #ffffffa1;
+  border-radius: 20px;
+  border: 2px solid white;
+  text-align: center;
 }
 .box-table {
   box-shadow: 0px 0px 3px rgb(84, 84, 84);

@@ -4,7 +4,7 @@
       <SideSearch
         msgplace="พิมพ์บทความที่ต้องการค้นหา"
         namepage="blog"
-        :page=page
+        :page="page"
       />
       <div class="sidebar-block">
         <h4 class="sidebar-title color-dark-2 letter-spacing">หมวดหมู่</h4>

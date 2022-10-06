@@ -1,5 +1,16 @@
 <template>
   <main>
+    <div class="container-fluid">
+      <div class="row">
+        <iframe
+          src="https://spatial.io/s/LAB-KILs-3D-Area-6336651f63996a0001aedbe5"
+          height="500px;"
+          width="100%;"
+          title="Iframe Example"
+        ></iframe>
+      </div>
+    </div>
+
     <div class="top-baner">
       <div class="clip">
         <div
@@ -207,6 +218,7 @@ export default defineComponent({
     Navigation,
     // Pagination,
   },
+
   setup() {
     const mainRoutData = ref([]);
     const router = useRouter();

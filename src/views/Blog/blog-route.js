@@ -27,7 +27,6 @@ const blogRoute = [
     component: () =>
       import(/* webpackChunkName: "blogdetail" */ "./BlogDetail.vue"),
   },
-  
 ];
 
 export default blogRoute;

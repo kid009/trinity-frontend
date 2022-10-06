@@ -1,5 +1,4 @@
 <template>
-
   <div class="container">
     <div
       class="grid-container"
@@ -54,7 +53,6 @@
               >
             </div>
           </div>
-       
         </div>
       </div>
     </div>
@@ -106,7 +104,6 @@ export default {
 </script>
 
 <style scoped>
-
 /*main2*/
 .grid-container {
   min-height: 100%;

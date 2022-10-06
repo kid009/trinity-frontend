@@ -13,7 +13,6 @@ import TravelWay from "./TravelWay.vue";
 import NameTrvel from "./NameTravel.vue";
 import SelectStart from "./SelectStart.vue";
 
-
 export default {
   name: "GridTravel",
   components: {
@@ -21,13 +20,12 @@ export default {
     TravelWay,
     SelectStart,
   },
-  
 };
 </script>
 
 <style scoped>
 .grid-travel {
-     background: linear-gradient(-90deg,#093,#12e258,#96dbc7);
+  background: linear-gradient(-90deg, #093, #12e258, #96dbc7);
 }
 .grid {
   display: grid;
@@ -38,4 +36,3 @@ export default {
   padding: 20px;
 }
 </style>
-

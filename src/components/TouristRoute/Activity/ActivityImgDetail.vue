@@ -21,14 +21,14 @@
             style="
               width: 1944px;
               transition-duration: 0s;
-           
+
               height: 629px;
             "
           >
             <div
               class="swiper-slide swiper-slide-visible swiper-slide-active"
               style="width: 324px; height: 629px"
-              v-for="items in activitydetailimg.slice(0,1)"
+              v-for="items in activitydetailimg.slice(0, 1)"
               v-bind:key="items.activity_id"
             >
               <div class="hotel-item style-2">
@@ -110,5 +110,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

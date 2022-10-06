@@ -18,7 +18,6 @@
     <div v-else-if="role_id == 2">
       <FormIndexPage />
     </div>
-
     <!-- <div class="grid-bg">
         <img src="images/home1.png" alt="" />
       </div> -->

@@ -7,7 +7,10 @@
       :page="page"
       namepage="blog"
     /> -->
-    <Banner msg="BLOG" img="https://cdn.pixabay.com/photo/2015/05/31/11/25/girl-791177_960_720.jpg" />
+    <Banner
+      msg="BLOG"
+      img="https://cdn.pixabay.com/photo/2015/05/31/11/25/girl-791177_960_720.jpg"
+    />
 
     <div class="list-wrapper bg-grey-2">
       <div class="container box">

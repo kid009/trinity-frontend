@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div class="row no-padd">
       <div class="col-md-6 col-sm-12 col-xs-12">
         <div class="item-block">
@@ -114,17 +114,12 @@
         </div>
       </div>
     </div>
-
-    
   </div>
 </template>
 
 <script>
-
-
 export default {
   name: "RestaurantRegional",
-  
 };
 </script>
 

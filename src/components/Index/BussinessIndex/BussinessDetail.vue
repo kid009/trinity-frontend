@@ -15,98 +15,110 @@
         class="item col-xs-12 col-md-6"
         style="position: absolute; left: 585px; top: 0px"
       >
+        <div v-for="items in service" v-bind:key="items.bussiness_service_id">
+          <div v-show="items.bussiness_service_id == 9">
+            <div
+              class="
+                tour-block tour-block-s-2
+                radius-5
+                hover-blue
+                background-block
+              "
+              :src="items.bussiness_service_image_cover_link"
+            >
+              <img
+                class="
+                  img-serknows
+                  tour-block tour-block-s-2
+                  radius-5
+                  hover-blue
+                  background-block
+                "
+                :src="items.bussiness_service_image_cover_link"
+                alt=""
+              />
 
-      <div v-for="items in service" v-bind:key="items.bussiness_service_id">
-        <div v-show="items.bussiness_service_id == 9">
-        <div
-          class="tour-block tour-block-s-2 radius-5 hover-blue background-block"
-          :src="items.bussiness_service_image_cover_link"
-        >
-        <img
-            class="img-serknows tour-block tour-block-s-2 radius-5 hover-blue background-block"
-            :src="items.bussiness_service_image_cover_link"
-            alt=""
-            
-          />
+              <div class="tour-layer delay-1"></div>
+              <img
+                class="center-image"
+                :src="items.bussiness_service_image_cover_link"
+                alt=""
+                style="display: none"
+              />
+              <div class="tour-caption">
+                <div class="vertical-align">
+                  <h3 class="letter-layout">การบริการ</h3>
+                  <h3 class="letter-layout">
+                    {{ items.bussiness_service_name }}
+                  </h3>
 
-          <div class="tour-layer delay-1"></div>
-          <img
-            class="center-image"
-            :src="items.bussiness_service_image_cover_link"
-            alt=""
-            style="display: none"
-          />
-          <div class="tour-caption">
-            <div class="vertical-align">
-              <h3 class="letter-layout">การบริการ</h3>
-              <h3 class="letter-layout">{{items.bussiness_service_name}}</h3>
-
-              <p class="color-white-light" v-html="items.bussiness_service_detail">
-              </p>
+                  <p
+                    class="color-white-light"
+                    v-html="items.bussiness_service_detail"
+                  ></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-        </div>
       </div>
-
 
       <div
         class="item col-xs-12 col-md-6"
-        style="position: absolute; left: 585px; top: 0px" 
+        style="position: absolute; left: 585px; top: 0px"
       >
-      <div v-for="items in knowhow" v-bind:key="items.bussiness_knowhow_id">
-      <div v-show="items.bussiness_knowhow_id == 8">
-        <div
-          class="tour-block tour-block-s-2 radius-5 hover-blue background-block"
-          :src="items.bussiness_knowhow_image_cover_link"
-        >
-        <img
-            class="img-serknows tour-block tour-block-s-2 radius-5 hover-blue background-block"
-            :src="items.bussiness_knowhow_image_cover_link"
-            alt=""
-            
-          />
-        
+        <div v-for="items in knowhow" v-bind:key="items.bussiness_knowhow_id">
+          <div v-show="items.bussiness_knowhow_id == 8">
+            <div
+              class="
+                tour-block tour-block-s-2
+                radius-5
+                hover-blue
+                background-block
+              "
+              :src="items.bussiness_knowhow_image_cover_link"
+            >
+              <img
+                class="
+                  img-serknows
+                  tour-block tour-block-s-2
+                  radius-5
+                  hover-blue
+                  background-block
+                "
+                :src="items.bussiness_knowhow_image_cover_link"
+                alt=""
+              />
 
-          <div class="tour-layer delay-1"></div>
-          <img
-            class="center-image"
-            :src="items.bussiness_knowhow_image_cover_link"
-            alt=""
-            style="display: none"
-          />
-          <div class="tour-caption">
-            <div class="vertical-align">
-              <h3 class="letter-layout">องค์ความรู้</h3>
-              <h3 class="letter-layout">{{items.bussiness_knowhow_name}}</h3>
+              <div class="tour-layer delay-1"></div>
+              <img
+                class="center-image"
+                :src="items.bussiness_knowhow_image_cover_link"
+                alt=""
+                style="display: none"
+              />
+              <div class="tour-caption">
+                <div class="vertical-align">
+                  <h3 class="letter-layout">องค์ความรู้</h3>
+                  <h3 class="letter-layout">
+                    {{ items.bussiness_knowhow_name }}
+                  </h3>
 
-              <p class="color-white-light" v-html="items.bussiness_knowhow_detail">
-                
-              </p>
+                  <p
+                    class="color-white-light"
+                    v-html="items.bussiness_knowhow_detail"
+                  ></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-        </div>
       </div>
-     
-
-
-      
-
-
-  
-  
     </div>
   </div>
-
-
 </template>
 
 <script>
-
-
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import { BASE_API_URL } from "../../../constants";
@@ -134,14 +146,11 @@ export default {
       //console.log(response.data.data);
     };
 
-   
-    
-
     onMounted(() => {
       getData();
     });
 
-    return { knowhow ,service};
+    return { knowhow, service };
   },
 };
 </script>

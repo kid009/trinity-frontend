@@ -1,11 +1,12 @@
 <template>
   <div class="product">
-    <BannerSearch 
-    msg="นวัฒกรรมผลิตภัณฑ์"
-    img="images/floating-market_1.jpg"
-    msgplace="พิมพ์นวัตกรรมผลิตภัณฑ์การค้นหา"
-    page="1"
-    namepage="product"/>
+    <BannerSearch
+      msg="นวัฒกรรมผลิตภัณฑ์"
+      img="images/floating-market_1.jpg"
+      msgplace="พิมพ์นวัตกรรมผลิตภัณฑ์การค้นหา"
+      page="1"
+      namepage="product"
+    />
     <div class="list-wrapper bg-grey-2">
       <div class="container box">
         <div class="row">

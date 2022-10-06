@@ -2,7 +2,6 @@ import { h, resolveComponent } from "vue";
 
 import ResearcherDetailPage from "./ResearcherDetailPage.vue";
 
-
 const researcherRoute = [
   {
     path: "researcherroute",
@@ -18,8 +17,6 @@ const researcherRoute = [
       },
     ],
   },
- 
-  
 ];
 
 export default researcherRoute;

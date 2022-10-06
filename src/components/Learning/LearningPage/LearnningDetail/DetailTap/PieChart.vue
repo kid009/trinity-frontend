@@ -24,10 +24,10 @@ import {
   Tooltip,
   Legend,
   ArcElement,
-  CategoryScale
-} from 'chart.js'
+  CategoryScale,
+} from "chart.js";
 
-ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
+ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 
 export default {
   name: "PieChart",

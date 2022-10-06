@@ -11,26 +11,18 @@
       >หน้าถัดไป</a
     >
 
-
-    <ul class="cp_content color-4" > 
-        <li  v-for="n in pages " v-bind:key="n"><a @click="on_click( n , group, id)"> {{ n }} </a></li>
-        <li><a >...</a></li>
+    <ul class="cp_content color-4">
+      <li v-for="n in pages" v-bind:key="n">
+        <a @click="on_click(n, group, id)"> {{ n }} </a>
+      </li>
+      <li><a>...</a></li>
     </ul>
-
-
   </div>
 
-
-
-
   <!--------------- ---------------------------------------->
-
-
-
 </template>
 
 <script>
-
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import { BASE_API_URL } from "../../../constants";
@@ -55,34 +47,33 @@ export default {
     id = id.split("=");
     id = id[3];
 
-
-      const getData = async () => {
-
-        if (id == 0 && group == 0) {
+    const getData = async () => {
+      if (id == 0 && group == 0) {
         const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page=` + page +'&group=0&id=0'
+          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page=` +
+            page +
+            "&group=0&id=0"
         );
         pages.value = response.data.quantity_page;
-      } else if(group != 0 && id == 0){
-
+      } else if (group != 0 && id == 0) {
         const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page= `+ page +'&group=' + group +'&id=0'
+          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page= ` +
+            page +
+            "&group=" +
+            group +
+            "&id=0"
         );
         pages.value = response.data.quantity_page;
-
+      } else {
+        const response = await axios.get(
+          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page=` +
+            page +
+            "&group=0&id=" +
+            id
+        );
+        pages.value = response.data.quantity_page;
       }
-      else {
-        const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductCommunity?page=`+ page + '&group=0&id=' + id
-        );
-        pages.value = response.data.quantity_page;
-      }
-
-        
-       
-        
     };
-
 
     onMounted(() => {
       getData();
@@ -90,7 +81,12 @@ export default {
 
     function on_click(page, group, id) {
       window.location =
-        "businessproductcommunitydetailpage?page=" + page + "&group=" + group + "&id=" + id;
+        "businessproductcommunitydetailpage?page=" +
+        page +
+        "&group=" +
+        group +
+        "&id=" +
+        id;
     }
 
     return { pages, on_click, page, id, group };

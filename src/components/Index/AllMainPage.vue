@@ -8,21 +8,6 @@
         <div class="hotel-item bg-white">
           <!------------------------------------------ community ---------------------------------------------->
 
-          <!-- <div class="row">
-            <div
-              class="col-md-4"
-              v-for="item in community.slice(0, 6)"
-              v-bind:key="item.community_id"
-            >
-              <div class="thumbnail">
-                <img style="width:100%;height:11rem;" :src="item.community_image_cover_link" />
-                <div class="caption">
-                  <p>{{ item.community_name.substring(0, 32) }}</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
           <div class="row">
             <div class="col-md-6">
               <div class="second-title">
@@ -69,19 +54,25 @@
                     v-bind:key="item.community_id"
                   >
                     <a :href="'communitydetail?id=' + item.community_id">
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 180px"
+                        >
+                          <!-- <vue-responsive-image
+                            :image-url="item.community_image_cover_link"
+                            :image-ratio="150/150"
+                          ></vue-responsive-image> -->
                           <img
                             :src="item.community_image_cover_link"
-                            :key="item.community_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
-                          />                         
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{ item.community_name.substring(0, 20) }}
-                          </h6>
+                          />
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{ item.community_name.substring(0, 23) }}
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </a>
@@ -90,76 +81,33 @@
                 <carousel
                   :items-to-show="3"
                   :wrap-around="true"
-                  :autoplay="3000"
+                  :autoplay="2500"
                 >
                   <slide
                     v-for="item in community.slice(4, 8)"
                     v-bind:key="item.community_id"
                   >
                     <a :href="'communitydetail?id=' + item.community_id">
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 180px"
+                        >
                           <img
                             :src="item.community_image_cover_link"
-                            :key="item.community_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
                           />
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{ item.community_name.substring(0, 20) }}
-                          </h6>
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{ item.community_name.substring(0, 23) }}
+                            </h6>
+                          </div>
                         </div>
                       </div>
                     </a>
-                    <!-- <a
-                      :href="'communitydetail?id=' + item.community_id"
-                      class="img-all bg-bg-chrome"
-                      v-lazy="item.community_image_cover_link"
-                    >
-                      <div class="img-all color-bg-img"></div>
-
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <p class="textshadow color_p" style="color: white">
-                            {{ item.community_name.substring(0, 28) }}
-                          </p>
-                        </div>
-                      </div>
-                    </a> -->
                   </slide>
                 </carousel>
-                <!-- <div class="isotope-container row row10">
-                  <div
-                    class="
-                      item
-                      gal-item
-                      grid-sizer
-                      col10
-                      col-mob-12 col-xs-6 col-sm-4
-                    "
-                    v-for="item in community.slice(0, 6)"
-                    v-bind:key="item.community_id"
-                  >
-                    <a :href="'communitydetail?id=' + item.community_id">
-                      <div
-                        class="img-all bg-bg-chrome"
-                        v-lazy="item.community_image_cover_link"
-                      >
-                        <div class="img-all color-bg-img"></div>
-                      </div>
-
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <h3 class="hover-it textshadow">
-                            {{ item.community_name.substring(0, 32) }}
-                          </h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -193,8 +141,12 @@
                       <div
                         class="img-all-fr bg-bg-chrome"
                         v-lazy="'images/index/Artboardนวัต.png '"
+                        style="height: 28rem"
                       >
-                        <div class="img-all-fr color-bg-img"></div>
+                        <div
+                          class="img-all-fr color-bg-img"
+                          style="height: 28rem"
+                        ></div>
                       </div>
 
                       <div class="vertical-bottom">
@@ -226,26 +178,32 @@
                         item.researcher_innovation_id
                       "
                     >
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 200px"
+                        >
                           <img
                             :src="item.researcher_innovation_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
                           />
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{
-                              item.researcher_innovation_name.substring(0, 20)
-                            }}
-                          </h6>
-                          <p
-                            style="color: gray; font-size: 10px"
-                            v-html="
-                              item.researcher_innovation_detail.substring(0, 26)
-                            "
-                          ></p>
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{
+                                item.researcher_innovation_name.substring(0, 20)
+                              }}
+                            </h6>
+                            <div
+                              style="color: gray; font-size: 14px"
+                              v-html="
+                                item.researcher_innovation_detail.substring(
+                                  0,
+                                  26
+                                )
+                              "
+                            ></div>
+                          </div>
                         </div>
                       </div>
                     </a>
@@ -268,98 +226,37 @@
                         item.researcher_innovation_id
                       "
                     >
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 200px"
+                        >
                           <img
                             :src="item.researcher_innovation_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
                           />
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{
-                              item.researcher_innovation_name.substring(0, 20)
-                            }}
-                          </h6>
-                          <p
-                            style="color: gray; font-size: 10px"
-                            v-html="
-                              item.researcher_innovation_detail.substring(0, 26)
-                            "
-                          ></p>
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{
+                                item.researcher_innovation_name.substring(0, 20)
+                              }}
+                            </h6>
+                            <div
+                              style="color: gray; font-size: 14px"
+                              v-html="
+                                item.researcher_innovation_detail.substring(
+                                  0,
+                                  26
+                                )
+                              "
+                            ></div>
+                          </div>
                         </div>
                       </div>
                     </a>
-                    <!-- <a
-                      :href="
-                        'producttouristdetailpage?page=researcher_innovation&group=' +
-                        item.researcher_innovation_group_id +
-                        '&id=' +
-                        item.researcher_innovation_id
-                      "
-                      class="img-all bg-bg-chrome"
-                      v-lazy="item.researcher_innovation_image_cover_link"
-                    >
-                      <div class="img-all color-bg-img"></div>
-
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <p class="textshadow color_p" style="color: white">
-                            {{
-                              item.researcher_innovation_name.substring(0, 28)
-                            }}
-                          </p>
-                        </div>
-                      </div>
-                    </a> -->
                   </slide>
                 </carousel>
-                <!-- <div class="isotope-container row row10">
-                  <div
-                    class="
-                      item
-                      gal-item
-                      grid-sizer
-                      col10
-                      col-mob-12 col-xs-6 col-sm-4
-                    "
-                    v-for="item in innovation.slice(0, 6)"
-                    v-bind:key="item"
-                  >
-                    <a
-                      :href="
-                        'producttouristdetailpage?page=researcher_innovation&group=' +
-                        item.researcher_innovation_group_id +
-                        '&id=' +
-                        item.researcher_innovation_id
-                      "
-                    >
-                      <div
-                        class="img-all bg-bg-chrome"
-                        v-lazy="item.researcher_innovation_image_cover_link"
-                      >
-                        <div class="img-all color-bg-img"></div>
-                      </div>
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <h3 class="hover-it textshadow underline">
-                            {{
-                              item.researcher_innovation_name.substring(0, 32)
-                            }}
-                          </h3>
-                          <div class="rate"></div>
-                          <p
-                            class="textshadow color_p"
-                            v-html="
-                              item.researcher_innovation_detail.substring(0, 35)
-                            "
-                          ></p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -394,8 +291,12 @@
                       <div
                         class="img-all-fr bg-bg-chrome"
                         v-lazy="'images/index/Artboardกิจกรรม.png '"
+                        style="height: 28rem"
                       >
-                        <div class="img-all-fr color-bg-img"></div>
+                        <div
+                          class="img-all-fr color-bg-img"
+                          style="height: 28rem"
+                        ></div>
                       </div>
                       <div class="vertical-bottom">
                         <div class="text_center">
@@ -422,24 +323,27 @@
                         item.activity_id
                       "
                     >
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 200px"
+                        >
                           <img
                             :src="item.activity_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
                           />
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{ item.activity_name.substring(0, 20) }}
-                          </h6>
-                          <p
-                            style="color: gray; font-size: 10px"
-                            v-html="
-                              item.activity_duration_text.substring(0, 26)
-                            "
-                          ></p>
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{ item.activity_name.substring(0, 23) }}
+                            </h6>
+                            <div
+                              style="color: gray; font-size: 14px"
+                              v-html="
+                                item.activity_duration_text.substring(0, 26)
+                              "
+                            ></div>
+                          </div>
                         </div>
                       </div>
                     </a>
@@ -460,85 +364,32 @@
                         item.activity_id
                       "
                     >
-                      <div class="card card-price">
-                        <div class="card-img" style="width: 100%">
+                      <div class="carousel__item">
+                        <div
+                          class="thumbnail"
+                          style="border: 0px; height: 200px"
+                        >
                           <img
                             :src="item.activity_image_cover_link"
-                            style="height: 8rem; width: 100%"
+                            style="width: 100%; height: 150px"
                             class="img-responsive"
                           />
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                          <h6>
-                            {{ item.activity_name.substring(0, 20) }}
-                          </h6>
-                          <p
-                            style="color: gray; font-size: 10px"
-                            v-html="
-                              item.activity_duration_text.substring(0, 26)
-                            "
-                          ></p>
+                          <div class="caption" style="text-align: left">
+                            <h6>
+                              {{ item.activity_name.substring(0, 23) }}
+                            </h6>
+                            <div
+                              style="color: gray; font-size: 14px"
+                              v-html="
+                                item.activity_duration_text.substring(0, 26)
+                              "
+                            ></div>
+                          </div>
                         </div>
                       </div>
                     </a>
-                    <!-- <a
-                      :href="
-                        'ActivityDetailAll?page=1&group=0&id=' +
-                        item.activity_id
-                      "
-                      class="img-all bg-bg-chrome"
-                      v-lazy="item.activity_image_cover_link"
-                    >
-                      <div class="img-all color-bg-img"></div>
-
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <p class="textshadow color_p" style="color: white">
-                            {{ item.activity_name.substring(0, 28) }}
-                          </p>
-                        </div>
-                      </div>
-                    </a> -->
                   </slide>
                 </carousel>
-                <!-- <div class="isotope-container row row10">
-                  <div
-                    class="
-                      item
-                      gal-item
-                      grid-sizer
-                      col10
-                      col-mob-12 col-xs-6 col-sm-4
-                    "
-                    v-for="item in event.slice(0, 6)"
-                    v-bind:key="item.activity_id"
-                  >
-                    <a
-                      :href="
-                        'ActivityDetailAll?page=1&group=0&id=' +
-                        item.activity_id
-                      "
-                    >
-                      <div
-                        class="img-all bg-bg-chrome"
-                        v-lazy="item.activity_image_cover_link"
-                      >
-                        <div class="img-all color-bg-img"></div>
-                      </div>
-                      <div class="vertical-bottom">
-                        <div class="text_center">
-                          <h3 class="hover-it textshadow underline">
-                            {{ item.activity_name.substring(0, 32) }}
-                          </h3>
-                          <div class="rate"></div>
-                          <p class="textshadow color_p">
-                            {{ item.activity_duration_text.substring(0, 35) }}
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -570,8 +421,12 @@
                       <div
                         class="img-all-fr bg-bg-chrome"
                         v-lazy="'images/index/Untitled-1_0.jpg '"
+                        style="height: 28rem"
                       >
-                        <div class="img-all-fr color-bg-img"></div>
+                        <div
+                          class="img-all-fr color-bg-img"
+                          style="height: 28rem"
+                        ></div>
                       </div>
                       <div class="vertical-bottom">
                         <div class="text_center">
@@ -581,7 +436,7 @@
                     </router-link>
                   </div>
                 </div>
-                <div class="col-md-8" style="margin-top: -10px">
+                <div class="col-md-8">
                   <!-- <div class="isotope-container row row10"> -->
                   <carousel
                     :items-to-show="3"
@@ -597,26 +452,32 @@
                           on_click(page, group, items.tourism_main_route_id)
                         "
                       >
-                        <div class="card card-price">
-                          <div class="card-img" style="width: 100%">
+                        <div class="carousel__item">
+                          <div
+                            class="thumbnail"
+                            style="border: 0px; height: 200px"
+                          >
                             <img
                               :src="items.tourism_main_route_image"
-                              style="height: 8rem; width: 100%"
+                              style="width: 100%; height: 150px"
                               class="img-responsive"
                             />
-                          </div>
-                          <div class="card-body" style="text-align: left">
-                            <h6>
-                              {{
-                                items.tourism_main_route_name.substring(0, 20)
-                              }}
-                            </h6>
-                            <p
-                              style="color: gray; font-size: 10px"
-                              v-html="
-                                items.tourism_main_route_detail.substring(0, 26)
-                              "
-                            ></p>
+                            <div class="caption" style="text-align: left">
+                              <h6>
+                                {{
+                                  items.tourism_main_route_name.substring(0, 23)
+                                }}
+                              </h6>
+                              <div
+                                style="color: gray"
+                                v-html="
+                                  items.tourism_main_route_detail.substring(
+                                    0,
+                                    30
+                                  )
+                                "
+                              ></div>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -639,26 +500,32 @@
                           on_click(page, group, items.tourism_main_route_id)
                         "
                       >
-                        <div class="card card-price">
-                          <div class="card-img" style="width: 100%">
+                        <div class="carousel__item">
+                          <div
+                            class="thumbnail"
+                            style="border: 0px; height: 200px"
+                          >
                             <img
                               :src="items.tourism_main_route_image"
-                              style="width: 100%; height: 8rem"
+                              style="width: 100%; height: 150px"
                               class="img-responsive"
                             />
-                          </div>
-                          <div class="card-body" style="text-align: left">
-                            <h6>
-                              {{
-                                items.tourism_main_route_name.substring(0, 23)
-                              }}
-                            </h6>
-                            <p
-                              style="color: gray; font-size: 10px"
-                              v-html="
-                                items.tourism_main_route_detail.substring(0, 30)
-                              "
-                            ></p>
+                            <div class="caption" style="text-align: left">
+                              <h6>
+                                {{
+                                  items.tourism_main_route_name.substring(0, 23)
+                                }}
+                              </h6>
+                              <div
+                                style="color: gray"
+                                v-html="
+                                  items.tourism_main_route_detail.substring(
+                                    0,
+                                    30
+                                  )
+                                "
+                              ></div>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -694,32 +561,52 @@
                   v-for="item in businessProductCommunity.slice(0, 6)"
                   v-bind:key="item"
                 >
-                  <a
-                    :href="
-                      'producttouristdetailpage?page=bussiness_product_community&group=' +
-                      item.bussiness_product_community_group_id +
-                      '&id=' +
-                      item.bussiness_product_community_id
-                    "
-                  >
-                    <div class="card card-price">
-                      <div class="card-img">
+                  <div class="carousel__item">
+                    <div
+                      class="thumbnail"
+                      style="width: 100%; height: 100%; border: 0px"
+                    >
+                      <!-- <div class="carousel__item"> -->
+                      <img
+                        :src="
+                          // item.bussiness_product_community_image_cover_link
+                          item.product_image_cover_link
+                        "
+                        style="width: 100%; height: 18rem"
+                        class="img-responsive"
+                      />
+                      <div class="caption">
+                        <p v-html="item.product_name.substring(0, 30)"></p>
+                      </div>
+                      <!-- <div class="caption">
+                        <p>{{ item.product_name.substring(0, 30) }}</p>
+                      </div> -->
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                  <!-- <a href="">
+                    <div class="card card-price" style="width: 100%">
+                      <div class="card-img" style="width: 100%">
                         <img
                           :src="
-                            item.bussiness_product_community_image_cover_link
+                            // item.bussiness_product_community_image_cover_link
+                            item.product_image_cover_link
                           "
                           style="width: 100%; height: 18rem"
-                          class="img-responsive"
+                          class="img-all"
                         />
                       </div>
                       <div class="card-body">
                         <strong>{{
-                          item.bussiness_product_community_name.substring(0, 32)
+                          item.product_name.substring(0, 30)
                         }}</strong>
                       </div>
                     </div>
-                  </a>
+                  </a> -->
                 </slide>
+                <template #addons="{ slidesCount }">
+                  <Navigation v-if="slidesCount > 1" />
+                </template>
               </carousel>
               <!-- <div class="isotope-container row row10"> -->
               <!-- Carousel -->
@@ -824,15 +711,17 @@ import { onMounted, ref } from "vue";
 import axios from "axios";
 import { BASE_API_URL } from "../../constants";
 // Carousel
-import { Carousel, Slide } from "vue3-carousel";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
+// import VueResponsiveImage from "vue-responsive-image";
 
 export default {
   name: "AllMainPage",
   components: {
     Carousel,
     Slide,
-    // Navigation,
+    Navigation,
+    // VueResponsiveImage,
   },
   setup() {
     const community = ref([]);
@@ -863,8 +752,10 @@ export default {
       const responsebusinessProductCommunity = await axios.get(
         `${BASE_API_URL}/innovation-product/ProductAll?page=1&group=0&id=0`
       );
+      // businessProductCommunity.value =
+      //   responsebusinessProductCommunity.data.data_bussiness_product_community;
       businessProductCommunity.value =
-        responsebusinessProductCommunity.data.data_bussiness_product_community;
+        responsebusinessProductCommunity.data.data_product;
     };
 
     onMounted(() => {
@@ -893,9 +784,9 @@ p {
   line-height: 26px;
   font-weight: 400;
 }
-.color_p {
+/* .color_p {
   color: rgb(184, 184, 184);
-}
+}  */
 </style>
 
 <style scoped>
@@ -977,13 +868,6 @@ p {
 .text_center {
   text-align: center;
 }
-/* p {
-  font-size: 20px;
-  line-height: 1.363rem;
-  font-weight: 400;
-  color: rgb(184, 184, 184);
-} */
-
 .activity {
   background: rgba(255, 0, 0, 0);
   max-width: 120rem;
@@ -1000,7 +884,7 @@ p {
 }
 .img-all-fr {
   width: 100%;
-  height: 23rem;
+  height: 26rem;
   object-fit: cover;
   display: block;
   border-radius: 20px;
@@ -1127,7 +1011,7 @@ h4 {
 .carousel__item {
   min-height: 200px;
   width: 100%;
-  background-color: var(--vc-clr-primary);
+  background-color: var(--vc-clr-white);
   color: var(--vc-clr-white);
   font-size: 20px;
   border-radius: 8px;
@@ -1137,7 +1021,7 @@ h4 {
 }
 
 .carousel__slide {
-  padding: 10px;
+  padding: 5px;
 }
 
 .carousel__prev,
@@ -1148,7 +1032,6 @@ h4 {
 
 .radius-top img {
   width: 100%;
-
   object-fit: cover;
   display: block;
   height: 200px;
@@ -1158,228 +1041,16 @@ h4 {
     height: 300px;
   }
 }
-
-/* card */
-.card {
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 6px;
+img {
+  object-fit: cover;
 }
-.card > .card-link {
-  color: #333;
-}
-.card > .card-link:hover {
-  text-decoration: none;
-}
-.card > .card-link .card-img img {
-  border-radius: 6px 6px 0 0;
-}
-.card .card-img {
-  position: relative;
-  padding: 0;
-  display: table;
-}
-.card .card-img .card-caption {
-  position: absolute;
-  right: 0;
-  bottom: 16px;
-  left: 0;
-}
-.card .card-body {
-  display: table;
+.vue-responsive-image {
   width: 100%;
-  padding: 12px;
+  height: 11rem;
 }
-.card .card-header {
-  border-radius: 6px 6px 0 0;
-  padding: 8px;
-}
-.card .card-footer {
-  border-radius: 0 0 6px 6px;
-  padding: 8px;
-}
-.card .card-left {
-  position: relative;
-  float: left;
-  padding: 0 0 8px 0;
-}
-.card .card-right {
-  position: relative;
-  float: left;
-  padding: 8px 0 0 0;
-}
-.card .card-body h1:first-child,
-.card .card-body h2:first-child,
-.card .card-body h3:first-child,
-.card .card-body h4:first-child,
-.card .card-body .h1,
-.card .card-body .h2,
-.card .card-body .h3,
-.card .card-body .h4 {
-  margin-top: 0;
-}
-.card .card-body .heading {
-  display: block;
-}
-.card .card-body .heading:last-child {
-  margin-bottom: 0;
-}
-
-.card .card-body .lead {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .card .card-left {
-    float: left;
-    padding: 0 8px 0 0;
-  }
-  .card .card-right {
-    float: left;
-    padding: 0 0 0 8px;
-  }
-
-  .card .card-4-8 .card-left {
-    width: 33.33333333%;
-  }
-  .card .card-4-8 .card-right {
-    width: 66.66666667%;
-  }
-
-  .card .card-5-7 .card-left {
-    width: 41.66666667%;
-  }
-  .card .card-5-7 .card-right {
-    width: 58.33333333%;
-  }
-
-  .card .card-6-6 .card-left {
-    width: 50%;
-  }
-  .card .card-6-6 .card-right {
-    width: 50%;
-  }
-
-  .card .card-7-5 .card-left {
-    width: 58.33333333%;
-  }
-  .card .card-7-5 .card-right {
-    width: 41.66666667%;
-  }
-
-  .card .card-8-4 .card-left {
-    width: 66.66666667%;
-  }
-  .card .card-8-4 .card-right {
-    width: 33.33333333%;
-  }
-}
-
-/* -- default theme ------ */
-.card-default {
-  border-color: #ddd;
-  background-color: #fff;
-  margin-bottom: 24px;
-}
-.card-default > .card-header,
-.card-default > .card-footer {
-  color: #333;
-  background-color: #ddd;
-}
-.card-default > .card-header {
-  border-bottom: 1px solid #ddd;
-  padding: 8px;
-}
-.card-default > .card-footer {
-  border-top: 1px solid #ddd;
-  padding: 8px;
-}
-.card-default > .card-img:first-child img {
-  border-radius: 6px 6px 0 0;
-}
-.card-default > .card-left {
-  padding-right: 4px;
-}
-.card-default > .card-right {
-  padding-left: 4px;
-}
-.card-default p:last-child {
-  margin-bottom: 0;
-}
-.card-default .card-caption {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-/* -- price theme ------ */
-.card-price {
-  border-color: #999;
-  background-color: #ededed;
-  margin-bottom: 24px;
-}
-.card-price > .card-heading,
-.card-price > .card-footer {
-  color: #333;
-  background-color: #fdfdfd;
-}
-.card-price > .card-heading {
-  border-bottom: 1px solid #ddd;
-  padding: 8px;
-}
-.card-price > .card-footer {
-  border-top: 1px solid #ddd;
-  padding: 8px;
-}
-.card-price > .card-img:first-child img {
-  border-radius: 6px 6px 0 0;
-}
-.card-price > .card-left {
-  padding-right: 4px;
-}
-.card-price > .card-right {
-  padding-left: 4px;
-}
-.card-price .card-caption {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-.card-price p:last-child {
-  margin-bottom: 0;
-}
-
-.card-price .price {
-  text-align: center;
-  color: #337ab7;
-  font-size: 3em;
-  text-transform: uppercase;
-  line-height: 0.7em;
-  margin: 24px 0 16px;
-}
-.card-price .price small {
-  font-size: 0.4em;
-  color: #66a5da;
-}
-.card-price .details {
-  list-style: none;
-  margin-bottom: 24px;
-  padding: 0 18px;
-}
-.card-price .details li {
-  text-align: center;
-  margin-bottom: 8px;
-}
-.card-price .buy-now {
-  text-transform: uppercase;
-}
-.card-price table .price {
-  font-size: 1.2em;
-  font-weight: 700;
-  text-align: left;
-}
-.card-price table .note {
-  color: #666;
-  font-size: 0.8em;
+.thumbnail {
+  width: 220px;
+  height: 225px;
+  overflow: hidden;
 }
 </style>

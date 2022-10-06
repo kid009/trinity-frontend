@@ -1,27 +1,35 @@
 <template>
-  <div >
-    
-
+  <div>
     <div class="grid-content clearfix">
-
       <!----------------------- producttourism ------------------------------------------------------------->
-          
-          <div class="list-item-entry"  v-for="items in producttourism"  v-bind:key="items.bussiness_product_tourism_id">
 
-        
-                <div class="hotel-item style-10 bg-white" >
-                  <div class="table-view">
-                    <a @click="on_click( 1, 2, items.bussiness_product_tourism_id, 'businessproducttouristdetailpage' )">
-                        <div class="radius-top ">
-                          <img
-                            id="img-travel"
-                            :src="items.bussiness_product_tourism_image_cover_link"
-                            alt=""
-                          />
-                        </div>
-                        <div class="title">
-                              <h4>{{ items.bussiness_product_tourism_name }}</h4>
-                              <!-- <button
+      <div
+        class="list-item-entry"
+        v-for="items in producttourism"
+        v-bind:key="items.bussiness_product_tourism_id"
+      >
+        <div class="hotel-item style-10 bg-white">
+          <div class="table-view">
+            <a
+              @click="
+                on_click(
+                  1,
+                  2,
+                  items.bussiness_product_tourism_id,
+                  'businessproducttouristdetailpage'
+                )
+              "
+            >
+              <div class="radius-top">
+                <img
+                  id="img-travel"
+                  :src="items.bussiness_product_tourism_image_cover_link"
+                  alt=""
+                />
+              </div>
+              <div class="title">
+                <h4>{{ items.bussiness_product_tourism_name }}</h4>
+                <!-- <button
                                                       class="c-button b-40 bg-red-3 hv-red-3-o"
                                                       type="button"
                                                       @click="
@@ -35,23 +43,16 @@
                                                     >
                                                       เพิ่มเติม
                                                     </button> -->
-                        </div>
-                              
-                    </a>
-                  </div>
-                </div>
-              
-          </div> 
-                      
-          
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!--------------------------------- technology -------------------------------------------------->
-   
+    </div>
+    <Pagination />
   </div>
-  <Pagination />
-
-
-</div>
 </template>
 
 <script>
@@ -62,12 +63,12 @@ import { BASE_API_URL } from "../../../constants";
 import Pagination from "./Pagination.vue";
 
 export default {
-    name: "BusinessProductTouristGrid",
-     components: {
-        Pagination,
-    },
-    
-    setup() {
+  name: "BusinessProductTouristGrid",
+  components: {
+    Pagination,
+  },
+
+  setup() {
     let page = window.location.search.substr(6, 1);
 
     let group = window.location.search;
@@ -79,28 +80,31 @@ export default {
     id = id.split("=");
     id = id[3];
 
- 
     const producttourism = ref([]);
-  
 
     const getData = async () => {
-        if (id == 0 && group == 0) {
+      if (id == 0 && group == 0) {
         const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page=` + page +'&group=0&id=0'
+          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page=` +
+            page +
+            "&group=0&id=0"
         );
         producttourism.value = response.data.data;
-
-      } else if(group != 0 && id == 0){
-
+      } else if (group != 0 && id == 0) {
         const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page= `+ page +'&group=' + group +'&id=0'
+          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page= ` +
+            page +
+            "&group=" +
+            group +
+            "&id=0"
         );
         producttourism.value = response.data.data;
-
-      }
-      else {
+      } else {
         const response = await axios.get(
-          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page=`+ page + '&group=0&id=' + id
+          `${BASE_API_URL}/businesstourism/BusinessProductTourism?page=` +
+            page +
+            "&group=0&id=" +
+            id
         );
         producttourism.value = response.data.data;
       }
@@ -123,21 +127,19 @@ export default {
       group,
     };
   },
-
-}
+};
 </script>
 
-
 <style scoped>
-.container-pad{
+.container-pad {
   margin-right: 80px;
   margin-left: 80px;
 }
- @media only screen and (max-width: 1024px) {
- .container-pad{
-  margin-right: 5px;
-  margin-left: 5px;
-} 
+@media only screen and (max-width: 1024px) {
+  .container-pad {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }
 .hotel-items {
   padding: 20px 0px 40px;

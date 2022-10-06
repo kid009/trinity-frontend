@@ -17,7 +17,6 @@
 </template>
 
 <script>
-
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import { BASE_API_URL } from "../../constants";
@@ -42,15 +41,12 @@ export default {
     id = id.split("=");
     id = id[3];
 
-
-      const getData = async () => {
-        const response = await axios.get(
-          `${BASE_API_URL}/tourism-route/mainRoute?page`
-        );
-        pages.value = response.data.data.last_page;
-        
+    const getData = async () => {
+      const response = await axios.get(
+        `${BASE_API_URL}/tourism-route/mainRoute?page`
+      );
+      pages.value = response.data.data.last_page;
     };
-
 
     onMounted(() => {
       getData();

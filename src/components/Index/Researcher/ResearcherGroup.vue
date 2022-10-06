@@ -130,9 +130,7 @@ h2 {
   margin: auto;
 }
 
-
-   /* STYLE 1 */
- 
+/* STYLE 1 */
 
 #style-1::-webkit-scrollbar-track {
   border-radius: 10px;

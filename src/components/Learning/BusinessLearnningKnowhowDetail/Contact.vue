@@ -1,6 +1,4 @@
 <template>
-
-
   <div
     class="col-xs-12 col-md-3"
     v-for="items in ResearcherDetail"
@@ -35,7 +33,10 @@
                 </p></b
               >
 
-              <a class="img-resize" target="_blank" :href="'HTTP://LINE.ME/TI/P/'+items.user_line"
+              <a
+                class="img-resize"
+                target="_blank"
+                :href="'HTTP://LINE.ME/TI/P/' + items.user_line"
                 ><img id="bordercl" src="images/product/line-icon.png" alt=""
               /></a>
               &nbsp;
@@ -53,10 +54,7 @@
                 ><img id="bordercl" src="images/product/instagrams.png" alt=""
               /></a>
               &nbsp;
-              <a
-                class="img-resize"
-                target="_blank"
-                href="{{items.user_link}}"
+              <a class="img-resize" target="_blank" href="{{items.user_link}}"
                 ><img id="bordercl" src="images/product/link.png" alt=""
               /></a>
             </div>
@@ -65,8 +63,6 @@
       </div>
     </div>
   </div>
-
- 
 </template>
 
 <script>
@@ -76,7 +72,6 @@ import { BASE_API_URL } from "../../../constants";
 export default {
   name: "Contact",
   setup() {
-   
     const ResearcherDetail = ref([]);
     const KnowhowDetail = ref([]);
 
@@ -92,18 +87,16 @@ export default {
     id = id[3];
 
     const getData = async () => {
+      const responsesKnowhowDetail = await axios.get(
+        `${BASE_API_URL}/Researcher/KnowhowDetail/` + id
+      );
+      KnowhowDetail.value = responsesKnowhowDetail.data.data[0].create_by;
 
-        const responsesKnowhowDetail = await axios.get(
-        `${BASE_API_URL}/Researcher/KnowhowDetail/`+id
-      	);
-      	KnowhowDetail.value = responsesKnowhowDetail.data.data[0].create_by;
-
-        const responses = await axios.get(
-          `${BASE_API_URL}/Researcher/ResearcherDetail/`+ KnowhowDetail.value
-        );
-        ResearcherDetail.value = responses.data.data;
-        console.log(responses.data.data);
-      
+      const responses = await axios.get(
+        `${BASE_API_URL}/Researcher/ResearcherDetail/` + KnowhowDetail.value
+      );
+      ResearcherDetail.value = responses.data.data;
+      console.log(responses.data.data);
     };
 
     onMounted(() => {
@@ -111,7 +104,6 @@ export default {
     });
 
     return {
-     
       ResearcherDetail,
       KnowhowDetail,
       id,

@@ -1,7 +1,7 @@
 <template>
-  <Banner 
-  msg="การท่องเที่ยวโดยชุมชน (Community Based Tourism CBT)"
-  img="images/product/product-4.jpg"
+  <Banner
+    msg="การท่องเที่ยวโดยชุมชน (Community Based Tourism CBT)"
+    img="images/product/product-4.jpg"
   />
   <div class="container cbt-header">
     <p>
@@ -107,9 +107,9 @@ body * {
   -webkit-text-size-adjust: none;
 }
 #text-spac-page[data-v-724a95fe] {
-    letter-spacing: 0;
-    text-align: center;
-    color: #206ab0;
+  letter-spacing: 0;
+  text-align: center;
+  color: #206ab0;
 }
 .detail-content ul {
   width: 100% !important;
@@ -138,10 +138,10 @@ body * {
 }
 .img-CBT {
   width: auto;
-    display: block;
-    height: 314px;
-   margin: auto;
-   padding-top: 20px;
+  display: block;
+  height: 314px;
+  margin: auto;
+  padding-top: 20px;
 }
 #spes-text {
   letter-spacing: 0;
@@ -412,9 +412,8 @@ body * {
 #img-resize {
   margin-left: 10px;
   margin-bottom: 0px;
-    width: 37px;
-    height: auto;
-    vertical-align: middle;
+  width: 37px;
+  height: auto;
+  vertical-align: middle;
 }
-
 </style>

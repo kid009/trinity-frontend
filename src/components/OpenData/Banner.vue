@@ -1,13 +1,9 @@
 <template>
   <div class="banner u-diagonal">
-    <img
-      class="banner__hero-image"
-      :src="img"
-      alt="Imagen del banner"
-    />
+    <img class="banner__hero-image" :src="img" alt="Imagen del banner" />
     <div class="banner__content">
-      <h2 class="banner__title">{{msg}}</h2>
-      <hr>
+      <h2 class="banner__title">{{ msg }}</h2>
+      <hr />
     </div>
   </div>
 </template>
@@ -17,8 +13,7 @@ export default {
   props: {
     msg: String,
     img: String,
- 
-  }
+  },
 };
 </script>
 <style scoped>
@@ -30,11 +25,11 @@ h2 {
   font-weight: 500;
 }
 hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    width: 400px;
-    border-top: 1px solid #eee;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  width: 400px;
+  border-top: 1px solid #eee;
 }
 img {
   width: 100%;
@@ -47,7 +42,7 @@ img {
 .banner {
   display: flex;
   position: relative;
- padding: 7rem 1rem 3rem;
+  padding: 7rem 1rem 3rem;
   color: #fff;
   background-color: var(--primary-color);
   text-align: center;

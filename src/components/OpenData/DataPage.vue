@@ -2,7 +2,7 @@
   <div class="clearfix bg-white">
     <div class="container">
       <div class="detail-header style-2 position-body">
-        <h2 v-if="id!=null" class="color-dark-2 letter-spacing">{{ id }}</h2>
+        <h2 v-if="id != null" class="color-dark-2 letter-spacing">{{ id }}</h2>
         <h2 v-else class="color-dark-2 letter-spacing">ทั้งหมด</h2>
         <br />
         <div v-for="item in api" :key="item" class="tour-info-line clearfix">

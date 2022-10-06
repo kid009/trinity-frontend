@@ -43,18 +43,14 @@ export default {
       const response = await axios.get(
         `${BASE_API_URL}/community-tourism/casestudy`
       );
-    
+
       casestudy1.value = response.data.data[0];
-      if(response.data.data[1]){
+      if (response.data.data[1]) {
         casestudy2.value = response.data.data[1];
       }
-      if(response.data.data[2]){
+      if (response.data.data[2]) {
         casestudy3.value = response.data.data[2];
       }
-
-      
-      
-      
     };
 
     onMounted(() => {

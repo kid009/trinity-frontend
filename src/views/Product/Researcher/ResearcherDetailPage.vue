@@ -1,18 +1,16 @@
 <template>
-            <Detail/>
+  <Detail />
 </template>
 
 <script>
 import Detail from "../../components/Index/Researcher/ResearcherDetail/Detail.vue";
 
 export default {
-    name:"ResearcherDetailPage",
-    components:{
-        Detail,
-    }
-}
+  name: "ResearcherDetailPage",
+  components: {
+    Detail,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

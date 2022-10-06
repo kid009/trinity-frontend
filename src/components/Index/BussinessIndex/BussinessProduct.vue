@@ -4,32 +4,58 @@
       <h2 class="letter-layout">ผลิตภัณฑ์ธุรกิจ</h2>
     </div>
     <main>
-      <article >
-        <div v-for="items in product" v-bind:key="items.bussiness_product_community_id">
+      <article>
+        <div
+          v-for="items in product"
+          v-bind:key="items.bussiness_product_community_id"
+        >
           <div v-show="items.bussiness_product_community_id == 2">
-            <a class="black-hover" :href="'productDetail?page=4&group='+items.bussiness_product_community_group_id+'&id='+items.bussiness_product_community_id">
-              <img  />
+            <a
+              class="black-hover"
+              :href="
+                'productDetail?page=4&group=' +
+                items.bussiness_product_community_group_id +
+                '&id=' +
+                items.bussiness_product_community_id
+              "
+            >
+              <img />
               <vue-responsive-image
-                    :image-url="items.bussiness_product_community_image_cover_link"
-                    :image-ratio="16 / 9"
-                    :image-class="'img-full img-responsive img-sizes12'"
-                    ></vue-responsive-image>
-              <h3 class="letter-layout">{{ items.bussiness_product_community_name }}</h3>
+                :image-url="items.bussiness_product_community_image_cover_link"
+                :image-ratio="16 / 9"
+                :image-class="'img-full img-responsive img-sizes12'"
+              ></vue-responsive-image>
+              <h3 class="letter-layout">
+                {{ items.bussiness_product_community_name }}
+              </h3>
             </a>
           </div>
         </div>
       </article>
-     <article >
-        <div v-for="items in product" v-bind:key="items.bussiness_product_community_id">
+      <article>
+        <div
+          v-for="items in product"
+          v-bind:key="items.bussiness_product_community_id"
+        >
           <div v-show="items.bussiness_product_community_id == 4">
-            <a class="black-hover" :href="'productDetail?page=4&group='+items.bussiness_product_community_group_id+'&id='+items.bussiness_product_community_id">
-              <img  />
+            <a
+              class="black-hover"
+              :href="
+                'productDetail?page=4&group=' +
+                items.bussiness_product_community_group_id +
+                '&id=' +
+                items.bussiness_product_community_id
+              "
+            >
+              <img />
               <vue-responsive-image
-                    :image-url="items.bussiness_product_community_image_cover_link"
-                    :image-ratio="16 / 9"
-                    :image-class="'img-full img-responsive img-sizes12'"
-                    ></vue-responsive-image>
-              <h3 class="letter-layout">{{ items.bussiness_product_community_name }}</h3>
+                :image-url="items.bussiness_product_community_image_cover_link"
+                :image-ratio="16 / 9"
+                :image-class="'img-full img-responsive img-sizes12'"
+              ></vue-responsive-image>
+              <h3 class="letter-layout">
+                {{ items.bussiness_product_community_name }}
+              </h3>
             </a>
           </div>
         </div>
@@ -39,7 +65,6 @@
 </template>
 
 <script>
-
 import { onMounted, ref } from "vue";
 import axios from "axios";
 import { BASE_API_URL } from "../../../constants";
@@ -47,31 +72,22 @@ import VueResponsiveImage from "vue-responsive-image";
 
 export default {
   name: "BussinessProduct",
-    components: {
+  components: {
     VueResponsiveImage,
-
-
   },
 
   setup() {
     const product = ref([]);
-    
+
     const getData = async () => {
       const response = await axios.get(
         `${BASE_API_URL}/businesstourism/productcommunity`
       );
 
-      
-
       product.value = response.data.data;
-
-      
 
       //console.log(response.data.data);
     };
-
-   
-    
 
     onMounted(() => {
       getData();
@@ -81,7 +97,7 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 .img-sizes12 {
   height: 330px;
   width: 560px;

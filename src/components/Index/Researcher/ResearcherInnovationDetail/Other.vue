@@ -351,8 +351,8 @@ export default {
   object-fit: cover;
 }
 .gal-item .black-hover {
-    display: block;
-    position: relative;
-    box-shadow: 0px 0px 5px #00000059;
+  display: block;
+  position: relative;
+  box-shadow: 0px 0px 5px #00000059;
 }
 </style>

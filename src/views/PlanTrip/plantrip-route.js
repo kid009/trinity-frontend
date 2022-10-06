@@ -32,7 +32,7 @@ const plantripRoute = [
     component: () =>
       import(/* webpackChunkName: "FormIndex" */ "./FormIndex.vue"),
   },
-  
+
   {
     path: "/formCreate",
     name: "Create",

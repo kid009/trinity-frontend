@@ -1,24 +1,18 @@
 <template>
-<div>
-    
+  <div>
     <KnowhowCbt />
-</div>
-  
+  </div>
 </template>
 
 <script>
 import KnowhowCbt from "../../components/Learning/KnowhowCbt.vue";
 
 export default {
-    name: "CommunityLearningIndex",
-    components: {
-        KnowhowCbt,
-
-    },
-
-}
+  name: "CommunityLearningIndex",
+  components: {
+    KnowhowCbt,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

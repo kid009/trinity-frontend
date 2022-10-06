@@ -8,7 +8,15 @@
             v-bind:key="items.product_id"
             class="item hotels gal-item style-3 col-mob-12 col-xs-6 col-sm-4"
           >
-            <a class="black-hover" :href="'productDetail?page=6&group='+items.product_group_id+'&id='+items.product_id">
+            <a
+              class="black-hover"
+              :href="
+                'productDetail?page=6&group=' +
+                items.product_group_id +
+                '&id=' +
+                items.product_id
+              "
+            >
               <div class="gal-item-icon">
                 <img
                   style="height: 375px"
@@ -16,7 +24,7 @@
                   :src="items.product_image_cover_link"
                   alt=""
                 />
-                  <div class="price price-s-1">ราคา  </div>
+                <div class="price price-s-1">ราคา</div>
                 <div class="tour-layer delay-1"></div>
                 <div class="vertical-align">
                   <span class="c-button small bg-white delay-2"

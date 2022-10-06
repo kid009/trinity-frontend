@@ -20,13 +20,10 @@
                 <ul>
                   <!-- <li class="type-1 active"> -->
                   <li class="type-1">
-                    <a href="/"
-                      >หน้าแรก</a>
+                    <a href="/">หน้าแรก</a>
                   </li>
                   <li class="type-1">
-                    <router-link to="community">
-                      ท่องเที่ยวชุมชน
-                    </router-link>
+                    <router-link to="community"> ท่องเที่ยวชุมชน </router-link>
                   </li>
                   <li class="type-1">
                     <a

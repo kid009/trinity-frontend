@@ -82,13 +82,23 @@
                     <div class="tab-nav-wrapper">
                       <div class="nav-tab clearfix">
                         <div class="nav-tab-item active fontstyle">
-                          แผนที่การเดินทาง<br>Map
+                          แผนที่การเดินทาง<br />Map
                         </div>
-                        <div class="nav-tab-item fontstyle">การเดินทาง<br>Transportation</div>
-                        <div class="nav-tab-item fontstyle">ที่พัก<br>Hostal</div>
-                        <div class="nav-tab-item fontstyle">ร้านอาหาร<br>Restaurant</div>
-                        <div class="nav-tab-item fontstyle">รีวิว<br>Review</div>
-                          <div class="nav-tab-item fontstyle">ความปลอดภัย<br>sefety</div>
+                        <div class="nav-tab-item fontstyle">
+                          การเดินทาง<br />Transportation
+                        </div>
+                        <div class="nav-tab-item fontstyle">
+                          ที่พัก<br />Hostal
+                        </div>
+                        <div class="nav-tab-item fontstyle">
+                          ร้านอาหาร<br />Restaurant
+                        </div>
+                        <div class="nav-tab-item fontstyle">
+                          รีวิว<br />Review
+                        </div>
+                        <div class="nav-tab-item fontstyle">
+                          ความปลอดภัย<br />sefety
+                        </div>
                       </div>
                     </div>
                     <div class="tabs-content clearfix">
@@ -222,8 +232,7 @@ span {
   margin-top: 20px;
   border-radius: 20px;
 }
-.hotel-item .title{
+.hotel-item .title {
   border-radius: 20px;
-  
 }
 </style>

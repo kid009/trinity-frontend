@@ -24,20 +24,20 @@ export default {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 32px !important;
-     letter-spacing: 0px !important;
+    letter-spacing: 0px !important;
   }
   p {
     font-size: 14px;
   }
 }
 
- h1 {
+h1 {
   margin-top: 0;
   font-size: 42px;
-    font-weight: 600;
-    line-height: 70px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 p {

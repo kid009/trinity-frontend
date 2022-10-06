@@ -1,16 +1,19 @@
 <template>
- 
   <div id="frame-img" class="inner-banner style-4">
-    <img id="img-top-page" class="center-image" src="images/office.jpg" alt="" />
+    <img
+      id="img-top-page"
+      class="center-image"
+      src="images/office.jpg"
+      alt=""
+    />
     <div class="vertical-align">
       <div class="container">
         <h2 id="h2-topic-page" class="color-white">Case Study</h2>
-        <hr>
+        <hr />
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -32,24 +35,23 @@ export default {
   background-position: 77% 28%;
 }
 .inner-banner.style-4 {
-    min-height: 200px;
-
+  min-height: 200px;
 }
 #h2-topic-page {
-    margin-top: 0px;
-    letter-spacing: 0;
-    text-shadow: black 0.1em 0.1em 0.2em;
+  margin-top: 0px;
+  letter-spacing: 0;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
-h2{
+h2 {
   font-weight: 500;
 }
-#frame-img img{
-height: 100%;
+#frame-img img {
+  height: 100%;
 }
-.center-image{
+.center-image {
   object-fit: cover;
 }
-hr{
+hr {
   width: 60%;
 }
 </style>

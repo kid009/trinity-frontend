@@ -8,7 +8,7 @@
             v-for="items in contact.slice(0, 1)"
             v-bind:key="items.activity_id"
           >
-            <div >
+            <div>
               <br />
               <div class="team-entry style-2">
                 <h4 id="page-detail" class="color-black">ข้อมูลติดต่อ</h4>
@@ -30,9 +30,7 @@
                 <b
                   ><p class="color-black">
                     อีเมล:
-                    <span class="color-black">
-                      {{ items.activity_email }}</span
-                    >
+                    <span class="color-black"> {{ items.activity_email }}</span>
                   </p></b
                 >
                 <b
@@ -47,7 +45,7 @@
                 <a
                   class="img-resize"
                   target="_blank"
-                  :href="'HTTP://LINE.ME/TI/P/~'+items.activity_line"
+                  :href="'HTTP://LINE.ME/TI/P/~' + items.activity_line"
                   ><img id="bordercl" src="images/product/line-icon.png" alt=""
                 /></a>
                 &nbsp;
@@ -78,18 +76,9 @@
             </div>
           </div>
 
-
           <!-------------------------------- -------------------------------------------->
 
-         
-
-
           <!------------------------------------ ------------------------------------------------->
-
-
-
-
-
         </div>
       </div>
     </div>
@@ -122,13 +111,10 @@ export default {
     id = id[3];
 
     const getData = async () => {
-       const response = await axios.get(
+      const response = await axios.get(
         `${BASE_API_URL}/tourism-route/activitDetail/` + id
       );
       contact.value = response.data.data;
-
-       
-
     };
 
     function on_click(page, group, id) {

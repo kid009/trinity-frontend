@@ -12,7 +12,7 @@
         >
           <div class="hotel-item style-10 bg-white">
             <div class="table-view">
-           <a @click="on_click('hotel', items.hotel_id)">
+              <a @click="on_click('hotel', items.hotel_id)">
                 <div class="radius-top">
                   <img id="img-travel" :src="items.hotel_image_cover" alt="" />
                 </div>

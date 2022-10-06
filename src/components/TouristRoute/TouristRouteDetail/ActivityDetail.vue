@@ -16,7 +16,6 @@
                         class="detail-content color-1"
                         v-for="items in activity.slice(0, 1)"
                         v-bind:key="items.activity_id"
-                        
                       >
                         <div>
                           <!--------------------------- --------------------------------->
@@ -96,7 +95,6 @@
           <div class="sidebar bg-white clearfix">
             <div class="sidebar-block">
               <div class="search-inputs">
-             
                 <ContactDetail />
               </div>
             </div>
@@ -150,7 +148,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .img-sizes12 {

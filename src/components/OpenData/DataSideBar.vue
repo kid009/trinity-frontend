@@ -6,9 +6,7 @@
       </h4>
       <ul class="sidebar-category color-4">
         <li class="active">
-          <a class="cat-drop" href="DataApi" id="letter-travel">
-            ทั้งหมด
-          </a>
+          <a class="cat-drop" href="DataApi" id="letter-travel"> ทั้งหมด </a>
         </li>
 
         <li v-for="item in Group" :key="item">

@@ -1,14 +1,20 @@
 <template>
-  <div class="banner u-diagonal"
-      v-for="items in business"
-      v-bind:key="items.bussiness_id">
-
-    <img v-if="items.bussiness_image_background_cover_link != 'https://trinitytrip.com/image/bussiness/background/'"
+  <div
+    class="banner u-diagonal"
+    v-for="items in business"
+    v-bind:key="items.bussiness_id"
+  >
+    <img
+      v-if="
+        items.bussiness_image_background_cover_link !=
+        'https://trinitytrip.com/image/bussiness/background/'
+      "
       class="banner__hero-image"
       :src="items.bussiness_image_background_cover_link"
       alt="Imagen del banner"
     />
-    <img v-else
+    <img
+      v-else
       class="banner__hero-image"
       src="https://cdn.pixabay.com/photo/2020/05/31/04/36/investment-5241253_960_720.jpg"
       alt="Imagen del banner"
@@ -29,26 +35,19 @@ import { BASE_API_URL } from "../../../../constants";
 
 export default {
   name: "Banner",
-  
+
   setup() {
-   
     const business = ref([]);
-   
 
     let id = window.location.search;
     id = id.split("=");
     id = id[1];
 
     const getData = async () => {
-
       const responsebusiness = await axios.get(
-        `${BASE_API_URL}/businesstourism/BusinessDetail/`+id
+        `${BASE_API_URL}/businesstourism/BusinessDetail/` + id
       );
       business.value = responsebusiness.data.data;
-
-   
-
-  
     };
 
     onMounted(() => {
@@ -57,7 +56,6 @@ export default {
 
     return { business, id };
   },
-
 };
 </script>
 
@@ -65,20 +63,20 @@ export default {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 32px !important;
-     letter-spacing: 0px !important;
+    letter-spacing: 0px !important;
   }
   p {
     font-size: 14px;
   }
 }
 
- h1 {
+h1 {
   margin-top: 0;
   font-size: 42px;
-    font-weight: 600;
-    line-height: 70px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+  font-weight: 600;
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 p {
