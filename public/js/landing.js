@@ -133,14 +133,14 @@ $(function() {
 				centeredSlides: centerVar,
 				roundLengths: true,
 				onSlideChangeEnd: function(swiper){
-					var activeIndex = (loopVar===true)?swiper.activeIndex:swiper.activeLoopIndex;
+					var activeIndex = (loopVar===true)?swiper.realIndex:swiper.activeLoopIndex;
 					var qVal = $t.find('.swiper-slide-active').attr('data-val');
 					$t.find('.swiper-slide[data-val="'+qVal+'"]').addClass('active');
 				},
 				onSlideChangeStart: function(swiper){
 					$t.find('.swiper-slide.active').removeClass('active');
 					if($t.hasClass('thumbnails-preview')){
-						var activeIndex = (loopVar===1)?swiper.activeLoopIndex:swiper.activeIndex;
+						var activeIndex = (loopVar===1)?swiper.activeLoopIndex:swiper.realIndex;
 						swipers['swiper-'+$t.next().attr('id')].swipeTo(activeIndex);
 						$t.next().find('.current').removeClass('current');
 						$t.next().find('.swiper-slide[data-val="'+activeIndex+'"]').addClass('current');

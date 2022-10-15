@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <header class="color-1 hovered menu-3 NavBars">
       <div class="container box">
         <div class="row bar-blur">
@@ -170,7 +170,7 @@
         </div>
       </div>
     </header>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

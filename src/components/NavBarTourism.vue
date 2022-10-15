@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div> -->
     <header class="color-1 hovered menu-3 NavBars">
       <div class="container box">
         <div class="row bar-blur">
@@ -63,10 +63,7 @@
                       วางแผนการเดินทาง
                     </router-link>
                   </li>
-                  <li class="type-1">
-                    <!-- <a href="convenience"
-                      >อำนวยความสะดวก<span class="fa fa-angle-down"></span
-                    ></a> -->
+                  <!-- <li class="type-1">
                     <a href="facilitationindexpage?page=1&group=0&id=0"
                       >อำนวยความสะดวก<span class="fa fa-angle-down"></span
                     ></a>
@@ -76,18 +73,18 @@
                           ที่พัก<span class="fa fa-angle-down"></span>
                         </router-link>
                       </li>
-                      <!-- <li>
+                      <li>
                         <a href="restaurantindexpage"
                           >ร้านอาหาร<span class="fa fa-angle-down"></span
                         ></a>
-                      </li> -->
+                      </li> 
                       <li>
                         <router-link to="travalmapindexpage">
                           แผนที่การเดินทาง<span class="fa fa-angle-down"></span>
                         </router-link>
                       </li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li class="type-1">
                     <a> Blog<span class="fa fa-angle-down"></span> </a>
                     <ul class="dropmenu">
@@ -162,7 +159,7 @@
         </div>
       </div>
     </header>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
